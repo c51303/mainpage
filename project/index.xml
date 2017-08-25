@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on hunter</title>
+    <link>http://www.caofaguo.com/project/</link>
+    <description>Recent content in Projects on hunter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Aug 2017 22:14:05 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.caofaguo.com/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LinuxCommand</title>
+      <link>http://www.caofaguo.com/project/linuxcommand/</link>
+      <pubDate>Fri, 25 Aug 2017 22:14:05 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/project/linuxcommand/</guid>
+      <description> ps -aux |grep -i es top </description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.caofaguo.com/project/my-first-post/</link>
+      <pubDate>Fri, 25 Aug 2017 22:13:50 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/project/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

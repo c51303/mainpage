@@ -6,9 +6,64 @@
     <description>Recent content on hunter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 25 Aug 2017 22:14:05 +0800</lastBuildDate>
     
 	<atom:link href="http://www.caofaguo.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LinuxCommand</title>
+      <link>http://www.caofaguo.com/project/linuxcommand/</link>
+      <pubDate>Fri, 25 Aug 2017 22:14:05 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/project/linuxcommand/</guid>
+      <description> ps -aux |grep -i es top </description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.caofaguo.com/project/my-first-post/</link>
+      <pubDate>Fri, 25 Aug 2017 22:13:50 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/project/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.caofaguo.com/posts/my-first-post/</link>
+      <pubDate>Fri, 25 Aug 2017 11:57:44 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/posts/my-first-post/</guid>
+      <description> 寓情于景点在在 </description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.caofaguo.com/posts/my-2/</link>
+      <pubDate>Sun, 20 Aug 2017 01:57:44 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/posts/my-2/</guid>
+      <description> abc abc </description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>http://www.caofaguo.com/about/</link>
+      <pubDate>Sun, 20 Aug 2017 01:57:44 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/about/</guid>
+      <description> abc abc </description>
+    </item>
+    
+    <item>
+      <title>first</title>
+      <link>http://www.caofaguo.com/posts/newest/</link>
+      <pubDate>Thu, 08 Jan 2015 08:36:54 -0700</pubDate>
+      
+      <guid>http://www.caofaguo.com/posts/newest/</guid>
+      <description> Hello Hugo  aaa bbb ccc  </description>
+    </item>
     
   </channel>
 </rss>
