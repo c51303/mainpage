@@ -10,8 +10,8 @@
 <meta property="og:description" content="" />
 <meta name="author" content="map[]" />
 
-<meta property="og:title" content="LinuxCommand" />
-<meta property="twitter:title" content="LinuxCommand" />
+<meta property="og:title" content="ssh" />
+<meta property="twitter:title" content="ssh" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
@@ -34,8 +34,8 @@
     
 
     <base href="http://www.caofaguo.com/">
-    <title>LinuxCommand</title>
-    <link rel="canonical" href="http://www.caofaguo.com/project/linuxcommand/">
+    <title>ssh</title>
+    <link rel="canonical" href="http://www.caofaguo.com/posts/2/">
     
 
     
@@ -64,17 +64,69 @@
   <section class="section">
     <div class="container">
       <article class="article">
+        
+<h1 class="title"><a href="http://www.caofaguo.com/posts/2/">ssh</a> ::Draft</h1>
+<div class="post-metadata">
+    
+    <p class="text-muted"></p>
+    
+    <p class="text-muted"><i class="fa fa-calendar" aria-hidden="true"></i> August 25, 2017</p>
+</div>
         <div class="content">
+          <div class="well post-banner">
+    
+</div>
+           
+
+
+
+
+
+
           
+          <p>-i 指定证书pem</p>
 
-<h1 id="ps-aux-grep-i-es">ps -aux |grep -i es</h1>
+<p><strong>SSH问题集</strong></p>
 
-<h1 id="top">top</h1>
+<ol>
+<li>Received disconnect from 172.19.34.89 port 22:2: Too many authentication failures for root
+Authentication failed.
+ssh或scp出现认证错误，可添加PubkeyAuthentication参数解决。</li>
+</ol>
+
+<p><code>$ ssh -o PubkeyAuthentication=no root@host</code></p>
+
+<p><strong>ssh翻墙上网</strong></p>
+
+<pre><code>ssh -p 65199 -i ~/Documents/sshkeys/aws-seoul-key.pem ec2-user@52.79.104.178 -L 0.0.0.0:8080:0.0.0.0:8080 -N
+</code></pre>
+
+<p>** mac ssh**
+macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.</p>
+
+<pre><code>Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+</code></pre>
+
+<p>Add your SSH private key to the ssh-agent and store your passphrase in the keychain. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.
+ <code>ssh-add -K ~/.ssh/id_rsa</code></p>
 
         </div>
       </article>
     </div>
   </section>
+</div>
+<div class="container">
+  <div class="pagination">
+    
+      <a class="btn btn-secondary pull-right" href="http://www.caofaguo.com/posts/1/"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+    
+    
+      <a class="btn btn-secondary pull-right" href="http://www.caofaguo.com/posts/3/">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    
+  </div>
 </div>
     <div class="wrapper-footer">
       <div class="container">

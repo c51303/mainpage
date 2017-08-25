@@ -10,8 +10,8 @@
 <meta property="og:description" content="" />
 <meta name="author" content="map[]" />
 
-<meta property="og:title" content="LinuxCommand" />
-<meta property="twitter:title" content="LinuxCommand" />
+<meta property="og:title" content="shell环境初始化" />
+<meta property="twitter:title" content="shell环境初始化" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
@@ -34,8 +34,8 @@
     
 
     <base href="http://www.caofaguo.com/">
-    <title>LinuxCommand</title>
-    <link rel="canonical" href="http://www.caofaguo.com/project/linuxcommand/">
+    <title>shell环境初始化</title>
+    <link rel="canonical" href="http://www.caofaguo.com/posts/1/">
     
 
     
@@ -64,17 +64,78 @@
   <section class="section">
     <div class="container">
       <article class="article">
+        
+<h1 class="title"><a href="http://www.caofaguo.com/posts/1/">shell环境初始化</a> ::Draft</h1>
+<div class="post-metadata">
+    
+    <p class="text-muted"></p>
+    
+    <p class="text-muted"><i class="fa fa-calendar" aria-hidden="true"></i> August 25, 2017</p>
+</div>
         <div class="content">
+          <div class="well post-banner">
+    
+</div>
+           
+
+
+
+
+
+
           
+          <pre><code># User specific aliases and functions
+alias cp='cp -i'
+alias ln='ln -i'
+alias mv='mv -i'
+alias rm='rm -i --preserve-root'
+alias cpanm='cpanm --sudo --mirror http://mirrors.163.com/cpan --mirror-only'
 
-<h1 id="ps-aux-grep-i-es">ps -aux |grep -i es</h1>
+#/usr/sbin/ismtp
 
-<h1 id="top">top</h1>
+# a quick way to get out of current directory
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+
+# Colorize the grep command color
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# handy short cuts
+alias h='history'
+alias j='jobs -l'
+
+# Stop after sending count ECHO_REQUEST packets
+alias ping='ping -c 5'
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -s.2'
+
+# Show open ports 
+alias ports='netstat -natp|grep -i listen'
+
+# display all rules
+alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
+
+alias meminfo='egrep &quot;Mem|Cache|Swap&quot; /proc/meminfo'
+</code></pre>
 
         </div>
       </article>
     </div>
   </section>
+</div>
+<div class="container">
+  <div class="pagination">
+    
+      <a class="btn btn-secondary pull-right" href="http://www.caofaguo.com/posts/my-first-post/"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+    
+    
+      <a class="btn btn-secondary pull-right" href="http://www.caofaguo.com/posts/2/">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    
+  </div>
 </div>
     <div class="wrapper-footer">
       <div class="container">

@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.caofaguo.com/posts/3/</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/posts/2/</loc>
+    <lastmod>2017-08-25T22:52:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/posts/1/</loc>
+    <lastmod>2017-08-25T22:51:58+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.caofaguo.com/project/linuxcommand/</loc>
     <lastmod>2017-08-25T22:14:05+08:00</lastmod>
   </url>
@@ -38,8 +53,14 @@
   </url>
   
   <url>
+    <loc>http://www.caofaguo.com/</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.caofaguo.com/posts/</loc>
-    <lastmod>2017-08-25T11:57:44+08:00</lastmod>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,12 +72,6 @@
   
   <url>
     <loc>http://www.caofaguo.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.caofaguo.com/</loc>
-    <lastmod>2017-08-25T22:14:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
