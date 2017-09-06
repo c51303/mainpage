@@ -5,6 +5,8 @@
     <link>http://www.caofaguo.com/categories.html</link>
     <description>Recent content in Categories on Faguo Cao</description>
     <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>hunter_cao@163.com (Hunter)</managingEditor>
+    <webMaster>hunter_cao@163.com (Hunter)</webMaster>
     
 	<atom:link href="http://www.caofaguo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +15,7 @@
       <title>Curl</title>
       <link>http://www.caofaguo.com/categories/curl.html</link>
       <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/categories/curl.html</guid>
       <description></description>
     </item>
@@ -22,7 +24,7 @@
       <title>Gearmand</title>
       <link>http://www.caofaguo.com/categories/gearmand.html</link>
       <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/categories/gearmand.html</guid>
       <description></description>
     </item>
@@ -31,7 +33,7 @@
       <title>Jekyll</title>
       <link>http://www.caofaguo.com/categories/jekyll.html</link>
       <pubDate>Sun, 20 Aug 2017 22:51:58 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/categories/jekyll.html</guid>
       <description></description>
     </item>

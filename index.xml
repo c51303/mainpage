@@ -5,6 +5,8 @@
     <link>http://www.caofaguo.com/</link>
     <description>Recent content on Faguo Cao</description>
     <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>hunter_cao@163.com (Hunter)</managingEditor>
+    <webMaster>hunter_cao@163.com (Hunter)</webMaster>
     <lastBuildDate>Fri, 25 Aug 2017 22:52:10 +0800</lastBuildDate>
     
 	<atom:link href="http://www.caofaguo.com/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +16,7 @@
       <title>Gearmand快速操作</title>
       <link>http://www.caofaguo.com/post/opensource.html</link>
       <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/post/opensource.html</guid>
       <description>Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
 架构模型： 1. P -&amp;gt; Gearmand(multi) &amp;lt;- C 2. P -&amp;gt; Haproxy -&amp;gt; Gearmand(multi) &amp;lt;- C
@@ -32,7 +34,7 @@ shell&amp;gt; sqlite3 gearmand.db &amp;quot;CREATE TABLE gearman_queue(unique_ke
       <title>curl命令</title>
       <link>http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html</link>
       <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html</guid>
       <description>CURL 不显示进度条-s，-silent， curl -s 127.0.0.1:60081/phpfpm
 设置请求头信息 curl -H &#39;Accept-Language: zh&#39; http://a.com
@@ -45,7 +47,7 @@ curl -XPUT &#39;http://es1:9200/t1/users/1&#39; -d @1.json  请求vhost curl -H 
       <title>Mac安装Jekyll</title>
       <link>http://www.caofaguo.com/post/jekyll%E5%AE%89%E8%A3%85.html</link>
       <pubDate>Sun, 20 Aug 2017 22:51:58 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/post/jekyll%E5%AE%89%E8%A3%85.html</guid>
       <description>Mac安装Jekyll 安装测试于MacOS 10.12 依赖：appstore安装Xcode(约4GB), Command Line Tools(xcode-select &amp;ndash;install) Ruby version 2.1 以上, 包括库及头文件
 https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
@@ -59,7 +61,7 @@ categories：标签；目前只能有一个标签</description>
       <title>about</title>
       <link>http://www.caofaguo.com/about.html</link>
       <pubDate>Sun, 20 Aug 2017 01:57:44 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/about.html</guid>
       <description> abc abc </description>
     </item>

@@ -5,6 +5,8 @@
     <link>http://www.caofaguo.com/series/curl%E5%91%BD%E4%BB%A4.html</link>
     <description>Recent content in Curl命令 on Faguo Cao</description>
     <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>hunter_cao@163.com (Hunter)</managingEditor>
+    <webMaster>hunter_cao@163.com (Hunter)</webMaster>
     <lastBuildDate>Fri, 25 Aug 2017 22:52:10 +0800</lastBuildDate>
     
 	<atom:link href="http://www.caofaguo.com/series/curl%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +16,7 @@
       <title>curl命令</title>
       <link>http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html</link>
       <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html</guid>
       <description>CURL 不显示进度条-s，-silent， curl -s 127.0.0.1:60081/phpfpm
 设置请求头信息 curl -H &#39;Accept-Language: zh&#39; http://a.com

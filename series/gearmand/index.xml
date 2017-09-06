@@ -5,6 +5,8 @@
     <link>http://www.caofaguo.com/series/gearmand.html</link>
     <description>Recent content in Gearmand on Faguo Cao</description>
     <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>hunter_cao@163.com (Hunter)</managingEditor>
+    <webMaster>hunter_cao@163.com (Hunter)</webMaster>
     <lastBuildDate>Fri, 25 Aug 2017 22:52:10 +0800</lastBuildDate>
     
 	<atom:link href="http://www.caofaguo.com/series/gearmand/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +16,7 @@
       <title>Gearmand快速操作</title>
       <link>http://www.caofaguo.com/post/opensource.html</link>
       <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
-      
+      <author>hunter_cao@163.com (Hunter)</author>
       <guid>http://www.caofaguo.com/post/opensource.html</guid>
       <description>Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
 架构模型： 1. P -&amp;gt; Gearmand(multi) &amp;lt;- C 2. P -&amp;gt; Haproxy -&amp;gt; Gearmand(multi) &amp;lt;- C
