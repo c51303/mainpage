@@ -5,17 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Faguo Cao</title>
-  <meta property="og:title" content="Faguo Cao" />
-  <meta name="twitter:title" content="Faguo Cao" />
+  <title>curl命令</title>
+  <meta property="og:title" content="curl命令" />
+  <meta name="twitter:title" content="curl命令" />
+  <meta name="description" content="CURL 不显示进度条-s，-silent， curl -s 127.0.0.1:60081/phpfpm
+设置请求头信息 curl -H &#39;Accept-Language: zh&#39; http://a.com
+###查看响应头信息 curl -I http://www.baidu.com
+指定请求方式 –data/-d 方式指定使用POST方式传递数据
+curl -XPUT &#39;http://es1:9200/t1/users/1&#39; -d @1.json  请求vhost curl -H &#39;Host: test.com&#39; http://127.0.0.1:8000/ops/chk/status.html  传递参数 指定source ip 请求第三方地址，以缓解65k问题 curl -v3 --interface &quot;122.192.68.56&quot; &#39;http://app-ali.youguoquan.com/init?hunter&#39;  发送与接收压缩的请求 curl -H &quot;Accept-Encoding: gzip&quot; https://appv2.youguoquan.com/init |gunzip curl &#39;http://ip.cn/&#39; -H &#39;Host: ip.cn&#39; -H &#39;User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:54.0) Gecko/20100101 Firefox/54.0&#39;  断点续传 -C -o: 将文件保存为命令行中指定的文件名到本地 -O: 使用url中默认的文件名保存文件到本地">
+  <meta property="og:description" content="CURL 不显示进度条-s，-silent， curl -s 127.0.0.1:60081/phpfpm
+设置请求头信息 curl -H &#39;Accept-Language: zh&#39; http://a.com
+###查看响应头信息 curl -I http://www.baidu.com
+指定请求方式 –data/-d 方式指定使用POST方式传递数据
+curl -XPUT &#39;http://es1:9200/t1/users/1&#39; -d @1.json  请求vhost curl -H &#39;Host: test.com&#39; http://127.0.0.1:8000/ops/chk/status.html  传递参数 指定source ip 请求第三方地址，以缓解65k问题 curl -v3 --interface &quot;122.192.68.56&quot; &#39;http://app-ali.youguoquan.com/init?hunter&#39;  发送与接收压缩的请求 curl -H &quot;Accept-Encoding: gzip&quot; https://appv2.youguoquan.com/init |gunzip curl &#39;http://ip.cn/&#39; -H &#39;Host: ip.cn&#39; -H &#39;User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:54.0) Gecko/20100101 Firefox/54.0&#39;  断点续传 -C -o: 将文件保存为命令行中指定的文件名到本地 -O: 使用url中默认的文件名保存文件到本地">
+  <meta name="twitter:description" content="CURL 不显示进度条-s，-silent， curl -s 127.0.0.1:60081/phpfpm
+设置请求头信息 curl -H &#39;Accept-Language: zh&#39; http://a.com
+###查看响应头信息 curl -I http://www.baidu.com
+指定请求方式 –data/-d 方式指定使用POST方式传递数据
+curl -XPUT …">
   <meta name="author" content=""/>
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="http://www.caofaguo.com/" />
+  <meta property="og:url" content="http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Faguo Cao" />
 
   <meta name="generator" content="Hugo 0.26" />
-  <link rel="canonical" href="http://www.caofaguo.com/" />
+  <link rel="canonical" href="http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html" />
   <link rel="alternate" href="http://www.caofaguo.com/index.xml" type="application/rss+xml" title="Faguo Cao">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -136,9 +151,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>Faguo Cao</h1>
+            <div class="post-heading">
+              <h1>curl命令</h1>
                 
+                
+                  <span class="post-meta">
+  Posted on August 25, 2017
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -149,127 +171,113 @@
 
 
     
-  <div role="main" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
         
 
-        <div class="posts-list">
-          
-          
-            <article class="post-preview">
-              <a href="http://www.caofaguo.com/post/opensource.html">
-                <h2 class="post-title">Gearmand快速操作</h2>
-                
-              </a>
+<h1 id="curl">CURL</h1>
 
-              <span class="post-meta">
-  Posted on August 25, 2017
-  
-</span>
+<h3 id="不显示进度条-s-silent">不显示进度条-s，-silent，</h3>
 
+<p><code>curl -s 127.0.0.1:60081/phpfpm</code></p>
 
-              <div class="post-entry">
-                
-                  Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
-架构模型： 1. P -&gt; Gearmand(multi) &lt;- C 2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C
-第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
-基础安装
-shell&gt; useradd -r gearmand -s /sbin/nologin -M shell&gt; tar zxf gearmand-1.1.16.tar.gz shell&gt; cd gearmand-1.1.16 shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&gt; make &amp;&amp; make install shell&gt; cp gearmand.init /etc/init.d/gearmand shell&gt; chmod 700 /etc/init.d/gearmand  
-PHP模块安装
-shell&gt; pecl install gearman
+<h3 id="设置请求头信息">设置请求头信息</h3>
 
-初始化SQLite数据结构
-shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT PRIMARY KEY,function_name TEXT,when_to_run INTEGER,priority INTEGER,data BLOB);&quot; shell&gt; sqlite3 gearmand.
-                  <a href="http://www.caofaguo.com/post/opensource.html" class="post-read-more">[Read More]</a>
-                
-              </div>
+<p><code>curl -H 'Accept-Language: zh' http://a.com</code></p>
 
-              
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html">
-                <h2 class="post-title">curl命令</h2>
-                
-              </a>
+<p>###查看响应头信息
+<code>curl -I http://www.baidu.com</code></p>
 
-              <span class="post-meta">
-  Posted on August 25, 2017
-  
-</span>
+<h3 id="指定请求方式">指定请求方式</h3>
 
+<p>–data/-d 方式指定使用POST方式传递数据</p>
 
-              <div class="post-entry">
-                
-                  CURL 不显示进度条-s，-silent， curl -s 127.0.0.1:60081/phpfpm
-设置请求头信息 curl -H 'Accept-Language: zh' http://a.com
-###查看响应头信息 curl -I http://www.baidu.com
-指定请求方式 –data/-d 方式指定使用POST方式传递数据
-curl -XPUT 'http://es1:9200/t1/users/1' -d @1.json  请求vhost curl -H 'Host: test.com' http://127.0.0.1:8000/ops/chk/status.html  传递参数 指定source ip 请求第三方地址，以缓解65k问题 curl -v3 --interface &quot;122.192.68.56&quot; 'http://app-ali.youguoquan.com/init?hunter'  发送与接收压缩的请求 curl -H &quot;Accept-Encoding: gzip&quot; https://appv2.youguoquan.com/init |gunzip curl 'http://ip.cn/' -H 'Host: ip.cn' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:54.0) Gecko/20100101 Firefox/54.0'  断点续传 -C -o: 将文件保存为命令行中指定的文件名到本地 -O: 使用url中默认的文件名保存文件到本地
-                  <a href="http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.caofaguo.com/post/jekyll%E5%AE%89%E8%A3%85.html">
-                <h2 class="post-title">Mac安装Jekyll</h2>
-                
-              </a>
-
-              <span class="post-meta">
-  Posted on August 20, 2017
-  
-</span>
-
-
-              <div class="post-entry">
-                
-                  
-
-<h3 id="mac安装jekyll">Mac安装Jekyll</h3>
-
-<p>安装测试于MacOS 10.12
-依赖：appstore安装Xcode(约4GB),
-Command Line Tools(xcode-select &ndash;install)
-Ruby version 2.1 以上, 包括库及头文件</p>
-
-<p><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a><br />
-<a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent">https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent</a></p>
-
-<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-brew install ruby
-sudo gem install bundler
-sudo gem install jekyll
-jekyll -v
-jekyll new blogs
-cd blogs
-jekyll serve
-jekyll serve --detach  #后台运行
-
+<pre><code>curl -XPUT 'http://es1:9200/t1/users/1'  -d @1.json
 </code></pre>
 
-<p>title：文章内部标题</p>
+<h3 id="请求vhost">请求vhost</h3>
 
-<p>date：日期</p>
+<pre><code>curl -H 'Host: test.com' http://127.0.0.1:8000/ops/chk/status.html
+</code></pre>
 
-<p>categories：标签；目前只能有一个标签</p>
+<h2 id="传递参数">传递参数</h2>
 
-                
-              </div>
+<h3 id="指定source-ip-请求第三方地址-以缓解65k问题">指定source ip 请求第三方地址，以缓解65k问题</h3>
 
-              
-            </article>
-          
-        </div>
+<pre><code>curl -v3 --interface &quot;122.192.68.56&quot; 'http://app-ali.youguoquan.com/init?hunter'
+</code></pre>
 
+<h3 id="发送与接收压缩的请求">发送与接收压缩的请求</h3>
+
+<pre><code>curl -H &quot;Accept-Encoding: gzip&quot;  https://appv2.youguoquan.com/init |gunzip
+curl 'http://ip.cn/' -H 'Host: ip.cn' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:54.0) Gecko/20100101 Firefox/54.0'
+</code></pre>
+
+<h3 id="断点续传-c">断点续传 -C</h3>
+
+<p>-o: 将文件保存为命令行中指定的文件名到本地
+-O: 使用url中默认的文件名保存文件到本地</p>
+
+<pre><code>curl -C -o 1.zip http://www.a.com/1.zip
+</code></pre>
+
+<h3 id="下载限速-limit-rate">下载限速 &ndash;limit-rate</h3>
+
+<pre><code>curl --limit-rate 1000k -o a.zip http://www.a.com/1.zip
+</code></pre>
+
+<h3 id="忽略证书错误">忽略证书错误</h3>
+
+<pre><code>curl -k https://www.a.com
+</code></pre>
+
+<h3 id="获取重定向后的页面">获取重定向后的页面</h3>
+
+<pre><code>curl -L http://www.a.com
+</code></pre>
+
+<h3 id="授权">授权</h3>
+
+<pre><code>curl -u username:password http://www.a.com
+</code></pre>
+
+<h3 id="设置代理">设置代理</h3>
+
+<pre><code>curl -x proxyserver.com:8080 http://www.example.com
+</code></pre>
+
+<h3 id="ftp操作">ftp操作</h3>
+
+<pre><code># 列出指定目录下的所有文件
+curl -u ftpuser:ftppw -O ftp://ftp_server/public_html/
+# 上传多个文件
+curl -u ftpuser:ftppw -T &quot;{myfile1.txt, myfile2.txt}&quot; ftp://ftp_server/public_html/
+# 从标准输入获取内容保存到服务器的指定文件中
+curl -u ftpuser:ftppw -T - ftp://ftp_server/public_html/1.txt
+</code></pre>
+
+      </article>
+
+      <ul class="pager blog-pager">
         
-      </div>
+          <li class="previous">
+            <a href="http://www.caofaguo.com/post/jekyll%E5%AE%89%E8%A3%85.html" data-toggle="tooltip" data-placement="top" title="Mac安装Jekyll">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://www.caofaguo.com/post/opensource.html" data-toggle="tooltip" data-placement="top" title="Gearmand快速操作">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">

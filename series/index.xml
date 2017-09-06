@@ -2,13 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Faguo Cao</title>
-    <link>http://www.caofaguo.com/series/</link>
+    <link>http://www.caofaguo.com/series.html</link>
     <description>Recent content in Series on Faguo Cao</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Aug 2017 22:52:10 +0800</lastBuildDate>
     
 	<atom:link href="http://www.caofaguo.com/series/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Curl命令</title>
+      <link>http://www.caofaguo.com/series/curl%E5%91%BD%E4%BB%A4.html</link>
+      <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/series/curl%E5%91%BD%E4%BB%A4.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gearmand</title>
+      <link>http://www.caofaguo.com/series/gearmand.html</link>
+      <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/series/gearmand.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jekyll安装</title>
+      <link>http://www.caofaguo.com/series/jekyll%E5%AE%89%E8%A3%85.html</link>
+      <pubDate>Sun, 20 Aug 2017 22:51:58 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/series/jekyll%E5%AE%89%E8%A3%85.html</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

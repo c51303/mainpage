@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Faguo Cao</title>
-    <link>http://www.caofaguo.com/</link>
-    <description>Recent content on Faguo Cao</description>
+    <title>Posts on Faguo Cao</title>
+    <link>http://www.caofaguo.com/post.html</link>
+    <description>Recent content in Posts on Faguo Cao</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 25 Aug 2017 22:52:10 +0800</lastBuildDate>
     
-	<atom:link href="http://www.caofaguo.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.caofaguo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -53,15 +53,6 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; brew install ruby sudo gem install bundler sudo gem install jekyll jekyll -v jekyll new blogs cd blogs jekyll serve jekyll serve --detach #后台运行  title：文章内部标题
 date：日期
 categories：标签；目前只能有一个标签</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>http://www.caofaguo.com/about.html</link>
-      <pubDate>Sun, 20 Aug 2017 01:57:44 +0800</pubDate>
-      
-      <guid>http://www.caofaguo.com/about.html</guid>
-      <description> abc abc </description>
     </item>
     
   </channel>

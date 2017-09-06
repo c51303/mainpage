@@ -3,22 +3,86 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.caofaguo.com/categories/</loc>
+    <loc>http://www.caofaguo.com/post/opensource.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/post/jekyll%E5%AE%89%E8%A3%85.html</loc>
+    <lastmod>2017-08-20T22:51:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/about.html</loc>
+    <lastmod>2017-08-20T01:57:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/categories.html</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/categories/curl.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/series/curl%E5%91%BD%E4%BB%A4.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.caofaguo.com/</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.caofaguo.com/series/</loc>
+    <loc>http://www.caofaguo.com/categories/gearmand.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.caofaguo.com/tags/</loc>
+    <loc>http://www.caofaguo.com/series/gearmand.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/categories/jekyll.html</loc>
+    <lastmod>2017-08-20T22:51:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/series/jekyll%E5%AE%89%E8%A3%85.html</loc>
+    <lastmod>2017-08-20T22:51:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/post.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/series.html</loc>
+    <lastmod>2017-08-25T22:52:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.caofaguo.com/tags.html</loc>
     <priority>0</priority>
   </url>
   

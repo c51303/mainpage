@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Gearmand快速操作</title>
+  <meta property="og:title" content="Gearmand快速操作" />
+  <meta name="twitter:title" content="Gearmand快速操作" />
+  <meta name="description" content="Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
+架构模型： 1. P -&gt; Gearmand(multi) &lt;- C 2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C
+第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
+基础安装
+shell&gt; useradd -r gearmand -s /sbin/nologin -M shell&gt; tar zxf gearmand-1.1.16.tar.gz shell&gt; cd gearmand-1.1.16 shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&gt; make &amp;&amp; make install shell&gt; cp gearmand.init /etc/init.d/gearmand shell&gt; chmod 700 /etc/init.d/gearmand  
+PHP模块安装
+shell&gt; pecl install gearman
+
+初始化SQLite数据结构
+shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT PRIMARY KEY,function_name TEXT,when_to_run INTEGER,priority INTEGER,data BLOB);&quot; shell&gt; sqlite3 gearmand.">
+  <meta property="og:description" content="Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
+架构模型： 1. P -&gt; Gearmand(multi) &lt;- C 2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C
+第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
+基础安装
+shell&gt; useradd -r gearmand -s /sbin/nologin -M shell&gt; tar zxf gearmand-1.1.16.tar.gz shell&gt; cd gearmand-1.1.16 shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&gt; make &amp;&amp; make install shell&gt; cp gearmand.init /etc/init.d/gearmand shell&gt; chmod 700 /etc/init.d/gearmand  
+PHP模块安装
+shell&gt; pecl install gearman
+
+初始化SQLite数据结构
+shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT PRIMARY KEY,function_name TEXT,when_to_run INTEGER,priority INTEGER,data BLOB);&quot; shell&gt; sqlite3 gearmand.">
+  <meta name="twitter:description" content="Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
+架构模型： 1. P -&gt; Gearmand(multi) &lt;- C 2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C
+第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy …">
+  <meta name="author" content=""/>
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="http://www.caofaguo.com/post/opensource.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Faguo Cao" />
+
+  <meta name="generator" content="Hugo 0.26" />
+  <link rel="canonical" href="http://www.caofaguo.com/post/opensource.html" />
+  <link rel="alternate" href="http://www.caofaguo.com/index.xml" type="application/rss+xml" title="Faguo Cao">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://www.caofaguo.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://www.caofaguo.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://www.caofaguo.com/css/highlight.min.css" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.caofaguo.com/">Faguo Cao</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="about" href="http://www.caofaguo.com/about/">about</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Gearmand快速操作</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on August 25, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h2 id="gearmand">Gearmand</h2>
+
+<p>分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。</p>
+
+<p><strong>架构模型</strong>：
+1. P -&gt; Gearmand(multi) &lt;- C
+2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C</p>
+
+<p>第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.</p>
+
+<hr />
+
+<p><strong>基础安装</strong></p>
+
+<pre><code>shell&gt; useradd -r gearmand -s /sbin/nologin -M
+shell&gt; tar zxf gearmand-1.1.16.tar.gz
+shell&gt; cd gearmand-1.1.16
+shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3
+shell&gt; make &amp;&amp; make install
+shell&gt; cp gearmand.init /etc/init.d/gearmand
+shell&gt; chmod 700 /etc/init.d/gearmand
+</code></pre>
+
+<p></p>
+<strong>PHP模块安装</strong></p>
+
+<p><code>shell&gt; pecl install gearman</code></p>
+
+<p></p>
+<strong>初始化SQLite数据结构</strong></p>
+
+<pre><code>shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT PRIMARY KEY,function_name TEXT,when_to_run INTEGER,priority INTEGER,data BLOB);&quot; 
+shell&gt; sqlite3 gearmand.db &quot;.databases&quot;
+shell&gt; sqlite3 gearmand.db &quot;.tables&quot;
+shell&gt; sqlite3 gearmand.db &quot;select * from gearman_queue&quot;    
+</code></pre>
+
+<p></p>
+<strong>启动服务</strong></p>
+
+<pre><code>shell&gt; gearmand -u  -d root -t 0  -L 0.0.0.0 -q libsqlite3 --libsqlite3-db=/data/gearmand/gearmand.db --libsqlite3-table=gearman_queue --log-file=/var/log/gearman.log --verbose DEBUG
+</code></pre>
+
+<p></p>
+<strong>查询状态</strong></p>
+
+<pre><code>shell&gt; watch -n 1 &quot;(echo status; sleep 0.1) | nc 127.0.0.1 4730&quot;
+shell&gt; echo status | nc -i 1 -w 1 127.0.0.1 4730    
+shell&gt; git clone https://github.com/osks/gearman-dashboard.git  
+shell&gt; /usr/local/bin/gearadmin --status    
+</code></pre>
+
+<p>旧版本任务Worker
+<code>php /data/gearman_task/public/new_worker.php -e pdt</code></p>
+
+<p>新版本任务Worker
+<code>gearmand -d -uroot -l /var/log/gearman.log --verbose INFO -q MySql --mysql-host=rm-uf6f4930e2kak4b04.mysql.rds.aliyuncs.com --mysql-user gameva --mysql-password Gameva490110 --mysql-db sre</code></p>
+
+<p></p>
+<strong>常见问题处理</strong></p>
+
+<p>1). php.ini加载gearman.so时，测试worker与client，返回Segmentation fault，dmesg信息如下：</p>
+
+<pre><code>php[30879]: segfault at 20 ip 00007f8219d00612 sp 00007fff2cd2dd60 error 4 in libuuid.so.1.3.0[7f8219cfe000+4000]
+</code></pre>
+
+<p>Google搜索libuuid.so和显而易见的是Imagick使用uuid_create（）为图像的UUID。
+The solution：调整&rdquo;imagick.so gmagick.so&rdquo;两个模块到gearman.so模块的前面，提前加载 I ensured that Imagick extension gets initialized last out of all of my PHP extensions.</p>
+
+<p>2). make出现如下错误，可能是安装新版本libevent并指定了特定安装路径。</p>
+
+<pre><code>libgearman-server/.libs/libgearman-server.a(libgearman_server_libgearman_server_la-gearmand_con.o): In function `gearmand_con_free': /home/meadhu/gearmand-1.1.11/libgearman-server/gearmand_con.cc:677: undefined reference to `event_initialized' collect2: ld returned 1 exit status
+</code></pre>
+
+<p>The solution： ln so文件到ldconfig的目录，建议lib安装不特定指定安装目录，默认安装完成直接ldconfig</p>
+
+<p>3). addServer 多个job Server，总是请求在最后添加的一个服务器上,只有当这个节点失败才会请求到另一个节点上。通过通过PHP随机打乱IP来addServer</p>
+
+<pre><code>// job servers
+        $jobservers = array('192.168.1.1','192.168.1.2');
+        // prepare gearman client
+        $gmclient = new GearmanClient();
+        // shuffle job servers (deliver jobs equally by server)
+        shuffle($jobservers);
+        // add job servers
+        foreach($jobservers as $jobserver) {
+            // add random jobserver
+            $gmclient-&gt;addServer($jobserver);
+            // check server state if ok end foreach
+            if (@$gmclient-&gt;ping('ping')) break;
+            // if connections fails reset client
+            $gmclient = new GearmanClient();
+        }
+</code></pre>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html" data-toggle="tooltip" data-placement="top" title="curl命令">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://www.caofaguo.com/">Faguo Cao</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.26</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://www.caofaguo.com/js/main.js"></script>
+<script src="http://www.caofaguo.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="http://www.caofaguo.com/js/load-photoswipe.js"></script>
+
+
+
+  </body>
+</html>
+

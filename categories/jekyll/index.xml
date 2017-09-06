@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on Faguo Cao</title>
+    <link>http://www.caofaguo.com/categories/jekyll.html</link>
+    <description>Recent content in Jekyll on Faguo Cao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 20 Aug 2017 22:51:58 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.caofaguo.com/categories/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac安装Jekyll</title>
+      <link>http://www.caofaguo.com/post/jekyll%E5%AE%89%E8%A3%85.html</link>
+      <pubDate>Sun, 20 Aug 2017 22:51:58 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/post/jekyll%E5%AE%89%E8%A3%85.html</guid>
+      <description>Mac安装Jekyll 安装测试于MacOS 10.12 依赖：appstore安装Xcode(约4GB), Command Line Tools(xcode-select &amp;ndash;install) Ruby version 2.1 以上, 包括库及头文件
+https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent
+/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; brew install ruby sudo gem install bundler sudo gem install jekyll jekyll -v jekyll new blogs cd blogs jekyll serve jekyll serve --detach #后台运行  title：文章内部标题
+date：日期
+categories：标签；目前只能有一个标签</description>
+    </item>
+    
+  </channel>
+</rss>

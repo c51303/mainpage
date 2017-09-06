@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Curl命令 on Faguo Cao</title>
+    <link>http://www.caofaguo.com/series/curl%E5%91%BD%E4%BB%A4.html</link>
+    <description>Recent content in Curl命令 on Faguo Cao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Aug 2017 22:52:10 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.caofaguo.com/series/curl%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>curl命令</title>
+      <link>http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html</link>
+      <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/post/curl%E5%91%BD%E4%BB%A4.html</guid>
+      <description>CURL 不显示进度条-s，-silent， curl -s 127.0.0.1:60081/phpfpm
+设置请求头信息 curl -H &#39;Accept-Language: zh&#39; http://a.com
+###查看响应头信息 curl -I http://www.baidu.com
+指定请求方式 –data/-d 方式指定使用POST方式传递数据
+curl -XPUT &#39;http://es1:9200/t1/users/1&#39; -d @1.json  请求vhost curl -H &#39;Host: test.com&#39; http://127.0.0.1:8000/ops/chk/status.html  传递参数 指定source ip 请求第三方地址，以缓解65k问题 curl -v3 --interface &amp;quot;122.192.68.56&amp;quot; &#39;http://app-ali.youguoquan.com/init?hunter&#39;  发送与接收压缩的请求 curl -H &amp;quot;Accept-Encoding: gzip&amp;quot; https://appv2.youguoquan.com/init |gunzip curl &#39;http://ip.cn/&#39; -H &#39;Host: ip.cn&#39; -H &#39;User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:54.0) Gecko/20100101 Firefox/54.0&#39;  断点续传 -C -o: 将文件保存为命令行中指定的文件名到本地 -O: 使用url中默认的文件名保存文件到本地</description>
+    </item>
+    
+  </channel>
+</rss>

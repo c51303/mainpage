@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gearmand on Faguo Cao</title>
+    <link>http://www.caofaguo.com/series/gearmand.html</link>
+    <description>Recent content in Gearmand on Faguo Cao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Aug 2017 22:52:10 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.caofaguo.com/series/gearmand/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gearmand快速操作</title>
+      <link>http://www.caofaguo.com/post/opensource.html</link>
+      <pubDate>Fri, 25 Aug 2017 22:52:10 +0800</pubDate>
+      
+      <guid>http://www.caofaguo.com/post/opensource.html</guid>
+      <description>Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
+架构模型： 1. P -&amp;gt; Gearmand(multi) &amp;lt;- C 2. P -&amp;gt; Haproxy -&amp;gt; Gearmand(multi) &amp;lt;- C
+第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
+基础安装
+shell&amp;gt; useradd -r gearmand -s /sbin/nologin -M shell&amp;gt; tar zxf gearmand-1.1.16.tar.gz shell&amp;gt; cd gearmand-1.1.16 shell&amp;gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&amp;gt; make &amp;amp;&amp;amp; make install shell&amp;gt; cp gearmand.init /etc/init.d/gearmand shell&amp;gt; chmod 700 /etc/init.d/gearmand  
+PHP模块安装
+shell&amp;gt; pecl install gearman
+
+初始化SQLite数据结构
+shell&amp;gt; sqlite3 gearmand.db &amp;quot;CREATE TABLE gearman_queue(unique_key TEXT PRIMARY KEY,function_name TEXT,when_to_run INTEGER,priority INTEGER,data BLOB);&amp;quot; shell&amp;gt; sqlite3 gearmand.</description>
+    </item>
+    
+  </channel>
+</rss>
