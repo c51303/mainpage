@@ -9,28 +9,21 @@
   <meta property="og:title" content="Gearmand快速操作" />
   <meta name="twitter:title" content="Gearmand快速操作" />
   <meta name="description" content="Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
-架构模型： 1. P -&gt; Gearmand(multi) &lt;- C 2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C
-第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
-基础安装
-shell&gt; useradd -r gearmand -s /sbin/nologin -M shell&gt; tar zxf gearmand-1.1.16.tar.gz shell&gt; cd gearmand-1.1.16 shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&gt; make &amp;&amp; make install shell&gt; cp gearmand.init /etc/init.d/gearmand shell&gt; chmod 700 /etc/init.d/gearmand  
-PHP模块安装
-shell&gt; pecl install gearman
+架构模型  P -&gt; Gearmand(multi) &lt;- C P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C  第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
+基础安装 shell&gt; useradd -r gearmand -s /sbin/nologin -M shell&gt; tar zxf gearmand-1.1.16.tar.gz shell&gt; cd gearmand-1.1.16 shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&gt; make &amp;&amp; make install shell&gt; cp gearmand.init /etc/init.d/gearmand shell&gt; chmod 700 /etc/init.d/gearmand  
+PHP模块安装 shell&gt; pecl install gearman
 
 初始化SQLite数据结构
 shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT PRIMARY KEY,function_name TEXT,when_to_run INTEGER,priority INTEGER,data BLOB);&quot; shell&gt; sqlite3 gearmand.">
   <meta property="og:description" content="Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
-架构模型： 1. P -&gt; Gearmand(multi) &lt;- C 2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C
-第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
-基础安装
-shell&gt; useradd -r gearmand -s /sbin/nologin -M shell&gt; tar zxf gearmand-1.1.16.tar.gz shell&gt; cd gearmand-1.1.16 shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&gt; make &amp;&amp; make install shell&gt; cp gearmand.init /etc/init.d/gearmand shell&gt; chmod 700 /etc/init.d/gearmand  
-PHP模块安装
-shell&gt; pecl install gearman
+架构模型  P -&gt; Gearmand(multi) &lt;- C P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C  第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.
+基础安装 shell&gt; useradd -r gearmand -s /sbin/nologin -M shell&gt; tar zxf gearmand-1.1.16.tar.gz shell&gt; cd gearmand-1.1.16 shell&gt; ./configure --prefix=/usr/local/gearmand --with-sqlite3 shell&gt; make &amp;&amp; make install shell&gt; cp gearmand.init /etc/init.d/gearmand shell&gt; chmod 700 /etc/init.d/gearmand  
+PHP模块安装 shell&gt; pecl install gearman
 
 初始化SQLite数据结构
 shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT PRIMARY KEY,function_name TEXT,when_to_run INTEGER,priority INTEGER,data BLOB);&quot; shell&gt; sqlite3 gearmand.">
   <meta name="twitter:description" content="Gearmand 分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。
-架构模型： 1. P -&gt; Gearmand(multi) &lt;- C 2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C
-第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy …">
+架构模型  P -&gt; Gearmand(multi) &lt;- C P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C  第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并 …">
   <meta name="author" content="Hunter"/>
   <link href='http://www.caofaguo.com/img/logo.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="http://www.caofaguo.com/img/logo.png" />
@@ -206,7 +199,18 @@ shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT P
 <ul>
 <li>
 <ul>
-<li><a href="#gearmand">Gearmand</a></li>
+<li><a href="#gearmand">Gearmand</a>
+<ul>
+<li>
+<ul>
+<li><a href="#架构模型">架构模型</a></li>
+<li><a href="#基础安装">基础安装</a></li>
+<li><a href="#php模块安装">PHP模块安装</a></li>
+<li><a href="#启动服务">启动服务</a></li>
+<li><a href="#查询状态">查询状态</a></li>
+<li><a href="#常见问题处理">常见问题处理</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -218,15 +222,18 @@ shell&gt; sqlite3 gearmand.db &quot;CREATE TABLE gearman_queue(unique_key TEXT P
 
 <p>分布式任务队列，支持数据持久化，落地到MySQL, SQLite, Redis, Memcached组件。</p>
 
-<p><strong>架构模型</strong>：
-1. P -&gt; Gearmand(multi) &lt;- C
-2. P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C</p>
+<h4 id="架构模型">架构模型</h4>
+
+<ol>
+<li>P -&gt; Gearmand(multi) &lt;- C</li>
+<li>P -&gt; Haproxy -&gt; Gearmand(multi) &lt;- C</li>
+</ol>
 
 <p>第1个适用于一般应用场景，或并发不高的后台任务。第2个适用于高并发的环境中，通过Haproxy有效控制并发，管理连接池.</p>
 
 <hr />
 
-<p><strong>基础安装</strong></p>
+<h4 id="基础安装">基础安装</h4>
 
 <pre><code>shell&gt; useradd -r gearmand -s /sbin/nologin -M
 shell&gt; tar zxf gearmand-1.1.16.tar.gz
@@ -237,8 +244,9 @@ shell&gt; cp gearmand.init /etc/init.d/gearmand
 shell&gt; chmod 700 /etc/init.d/gearmand
 </code></pre>
 
-<p></p>
-<strong>PHP模块安装</strong></p>
+<p></p></p>
+
+<h4 id="php模块安装">PHP模块安装</h4>
 
 <p><code>shell&gt; pecl install gearman</code></p>
 
@@ -251,14 +259,16 @@ shell&gt; sqlite3 gearmand.db &quot;.tables&quot;
 shell&gt; sqlite3 gearmand.db &quot;select * from gearman_queue&quot;    
 </code></pre>
 
-<p></p>
-<strong>启动服务</strong></p>
+<p></p></p>
+
+<h4 id="启动服务">启动服务</h4>
 
 <pre><code>shell&gt; gearmand -u  -d root -t 0  -L 0.0.0.0 -q libsqlite3 --libsqlite3-db=/data/gearmand/gearmand.db --libsqlite3-table=gearman_queue --log-file=/var/log/gearman.log --verbose DEBUG
 </code></pre>
 
-<p></p>
-<strong>查询状态</strong></p>
+<p></p></p>
+
+<h4 id="查询状态">查询状态</h4>
 
 <pre><code>shell&gt; watch -n 1 &quot;(echo status; sleep 0.1) | nc 127.0.0.1 4730&quot;
 shell&gt; echo status | nc -i 1 -w 1 127.0.0.1 4730    
@@ -272,8 +282,9 @@ shell&gt; /usr/local/bin/gearadmin --status
 <p>新版本任务Worker
 <code>gearmand -d -uroot -l /var/log/gearman.log --verbose INFO -q MySql --mysql-host=rm-uf6f4930e2kak4b04.mysql.rds.aliyuncs.com --mysql-user gameva --mysql-password Gameva490110 --mysql-db sre</code></p>
 
-<p></p>
-<strong>常见问题处理</strong></p>
+<p></p></p>
+
+<h4 id="常见问题处理">常见问题处理</h4>
 
 <p>1). php.ini加载gearman.so时，测试worker与client，返回Segmentation fault，dmesg信息如下：</p>
 
