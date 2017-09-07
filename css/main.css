@@ -1,8 +1,7 @@
 /* --- General --- */
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #404040;
   position: relative;
   background: #FFF;
@@ -23,8 +22,8 @@ p a {
   color: #008AFF;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  /* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+  font-weight: 600;
 }
 a {
   color: #008AFF;
@@ -706,4 +705,21 @@ td.gutter {
 input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
   box-sizing: content-box;
   line-height: normal;
+}
+
+/* add at 2017.9.6 */
+
+#toc-box {
+    position: fixed;
+    top: 90px;
+    right: 1rem;
+    width: 300px;
+    font-size: 14px;
+}
+
+#toc-box ul {
+    padding-left: 15px;
+}
+#toc-box li {
+
 }
